@@ -1,0 +1,38 @@
+// Slide manifest for the MOC Partner Program deck.
+// `id` matches the exported file slide-NN.webp (slide 1 is built live in HTML, not an image).
+// `defaultOn` controls whether the slide ships visible until a presenter changes it.
+// `flag` surfaces a short heads-up in the customize panel for slides worth a second look.
+const SLIDES = [
+  { id: 1,  label: "Cover",                               section: "Open",    defaultOn: true,  live: true },
+  { id: 2,  label: "Our History — Since 1954",             section: "Open",    defaultOn: true },
+  { id: 3,  label: "Our People",                           section: "Open",    defaultOn: true },
+  { id: 4,  label: "Our Pathway to Alignment",             section: "Open",    defaultOn: true },
+  { id: 5,  label: "Single Source — Overview",             section: "Overview",defaultOn: true },
+  { id: 6,  label: "Service Drive Solutions — detail",     section: "Overview",defaultOn: true },
+  { id: 7,  label: "Single Source — Overview",             section: "PER R.O.",defaultOn: true },
+  { id: 8,  label: "Subscription-Based Per Repair Order",  section: "PER R.O.",defaultOn: true },
+  { id: 9,  label: "Dealership Essentials — supplies detail", section: "PER R.O.", defaultOn: true },
+  { id: 10, label: "Pain Points",                          section: "PER R.O.", defaultOn: true },
+  { id: 11, label: "Manage Negative Behavior",             section: "PER R.O.", defaultOn: true },
+  { id: 12, label: "Alignment",                            section: "PER R.O.", defaultOn: true },
+  { id: 13, label: "Process",                              section: "PER R.O.", defaultOn: true },
+  { id: 14, label: "Data Table", section: "PER R.O.", defaultOn: false, customImage: true, flag: "Blank in the original deck. Screenshot your Excel table, host it on OneDrive, then paste that link below. <strong>Important:</strong> when sharing, set it to ‘Anyone with the link can view,’ not ‘People in your org,’ or the image won’t load for the prospect." },
+  { id: 15, label: "MOC 360 Program",                      section: "MOC 360", defaultOn: true },
+  { id: 16, label: "Products Available — Service Drive / Equipment / Detail", section: "MOC 360", defaultOn: true },
+  { id: 17, label: "Dealership Essentials — Shop/Janitorial+Safety", section: "MOC 360", defaultOn: true },
+  { id: 18, label: "Pain Points",                          section: "MOC 360", defaultOn: true },
+  { id: 19, label: "Manage Negative Behavior",             section: "MOC 360", defaultOn: true },
+  { id: 20, label: "Alignment",                            section: "MOC 360", defaultOn: true },
+  { id: 21, label: "Process",                              section: "MOC 360", defaultOn: true },
+  { id: 22, label: "Data Table", section: "MOC 360", defaultOn: false, customImage: true, flag: "Blank in the original deck. Screenshot your Excel table, host it on OneDrive, then paste that link below. <strong>Important:</strong> when sharing, set it to ‘Anyone with the link can view,’ not ‘People in your org,’ or the image won’t load for the prospect." },
+  { id: 23, label: "Single Source — Overview",             section: "Technology", defaultOn: true },
+  { id: 24, label: "Technology Solutions",                 section: "Technology", defaultOn: true },
+  { id: 25, label: "Single Source — Overview",             section: "Retention", defaultOn: true },
+  { id: 26, label: "Customer Retention",                   section: "Retention", defaultOn: true },
+  { id: 27, label: "Single Source — Overview",             section: "Training", defaultOn: true },
+  { id: 28, label: "Training Programs",                    section: "Training", defaultOn: true },
+  { id: 29, label: "Single Source — Overview",             section: "Essentials", defaultOn: true },
+  { id: 30, label: "Dealership Essentials",                section: "Essentials", defaultOn: true },
+  { id: 31, label: "Mission Quote",                        section: "Close",   defaultOn: true },
+  { id: 32, label: "One Partner / One Invoice / One Solution", section: "Close", defaultOn: true },
+];
