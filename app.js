@@ -38,7 +38,7 @@
   }
   let playOrder = buildPlayOrder();
 
-  // OneDrive/SharePoint share links open a viewer page, not the raw image —
+  // OneDrive/SharePoint share links open a viewer page, not the raw image;
   // they need a `download=1` param to serve actual image bytes. Rather than
   // ask a presenter to hand-edit the URL, detect those hosts and add it
   // ourselves so pasting the plain "Copy link" URL just works.
@@ -54,7 +54,7 @@
       }
       return u.toString();
     } catch {
-      return rawUrl; // not a parseable absolute URL — leave it alone
+      return rawUrl; // not a parseable absolute URL, leave it alone
     }
   }
 
@@ -63,7 +63,7 @@
 
   // Slides that can have their baked-in placeholder image swapped for a
   // presenter-supplied one (currently just the blank data-table slides).
-  // The swap lives entirely in the share link (?img14=...&img22=...) — the
+  // The swap lives entirely in the share link (?img14=...&img22=...), the
   // master deck's own image files are never touched.
   const CUSTOM_IMAGE_IDS = SLIDES.filter((s) => s.customImage).map((s) => s.id);
   const customImages = {}; // id -> url
@@ -149,7 +149,7 @@
   function render() {
     const visible = visibleSlideIds();
     if (visible.length === 0) {
-      // never allow a fully empty deck — fall back to the cover
+      // never allow a fully empty deck; fall back to the cover
       hiddenSet.delete(1);
       return render();
     }
@@ -337,7 +337,7 @@
   function setSlideImage(id, url) {
     if (url) {
       customImages[id] = url;
-      hiddenSet.delete(id); // added real data — show it by default
+      hiddenSet.delete(id); // added real data, show it by default
     } else {
       delete customImages[id];
     }

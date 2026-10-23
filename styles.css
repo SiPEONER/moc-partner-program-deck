@@ -501,7 +501,7 @@ html, body {
 .stage:-webkit-full-screen .slide-track {
   box-shadow: none;
 }
-/* The drawer lives outside #stage, so native fullscreen can't show it —
+/* The drawer lives outside #stage, so native fullscreen can't show it;
    hide the button rather than leave a dead click while presenting. */
 .stage:fullscreen .chrome-btn--customize,
 .stage:-webkit-full-screen .chrome-btn--customize {

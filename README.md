@@ -1,7 +1,7 @@
-# MOC Partner Program — live deck
+# MOC Partner Program: live deck
 
 A shareable, web version of `moc-global-pitchdeck-v3a.pptx`. Every slide after
-the cover is rendered straight from your finished PowerPoint design — nothing
+the cover is rendered straight from your finished PowerPoint design. Nothing
 was redesigned. The cover is the one live piece: a real HTML layout (not an
 image) so the partner logo slot actually works.
 
@@ -11,7 +11,7 @@ What it does:
 - A **Customize** panel lets a sales manager hide slides they don't want for
   a given pitch, reorder slides within their section using the up/down
   arrows next to each one, drop in the prospect's logo, and fill in the two
-  blank data tables (slides 14 and 22) with their own — then copy a link
+  blank data tables (slides 14 and 22) with their own, then copy a link
   that carries those choices. The master deck underneath is never changed;
   every customization lives only in that one link.
 
@@ -19,7 +19,7 @@ What it does:
 
 Each slide row in the Customize panel has small up/down arrows on the
 right. They only move a slide within its own section (e.g. within "PER
-R.O." or "MOC 360") — the arrow is grayed out once a slide is first or last
+R.O." or "MOC 360"). The arrow is grayed out once a slide is first or last
 in its section, so there's no way to drag something into the wrong part of
 the deck. The cover slide is fixed and has no arrows.
 
@@ -27,14 +27,14 @@ The new order is saved in the share link the same way hidden slides and
 custom logos are, so a reordered deck can still be copied and sent as a
 link without touching the master files.
 
-## Slides 14 and 22 are blank — and fillable
+## Slides 14 and 22 are blank, and fillable
 
-Both are a screenshot of an empty spreadsheet in the source deck — gray
+Both are a screenshot of an empty spreadsheet in the source deck: gray
 header row, gray label column, no data in any cell. They're off by default.
 
 The customize panel has a **"Paste image link…"** field directly under each
 one. Paste a link to an image and it replaces the blank placeholder on that
-slide (and switches it on automatically) — no deploy, no code change, just
+slide (and switches it on automatically). No deploy, no code change, just
 that one share link. Everyone on the team has Microsoft 365, so this uses
 what's already there: a screenshot, hosted on OneDrive.
 
@@ -43,16 +43,16 @@ what's already there: a screenshot, hosted on OneDrive.
 2. Save the screenshot to a OneDrive folder.
 3. Right-click the file → **Share** → set it to "Anyone with the link can
    view" → **Copy link**.
-4. Paste that link straight into the field — no editing needed. The app
+4. Paste that link straight into the field, no editing needed. The app
    recognizes OneDrive/SharePoint links automatically and fixes them up
    internally (they normally open a preview page instead of the raw image;
    previously this required manually adding `&download=1` to the URL, but
    that step is now automatic).
 5. To update the numbers later, re-save a new screenshot **over that same
-   file** — the link doesn't change, so nothing needs re-pasting.
+   file**. The link doesn't change, so nothing needs re-pasting.
 
 **Important:** the "Anyone with the link can view" setting in step 3 is the
-one step that can't be automated — if a file is shared only to "People in
+one step that can't be automated. If a file is shared only to "People in
 [org]," the image will fail to load for anyone outside your Microsoft 365
 tenant, which is exactly who's viewing the deck. Test any new link in an
 incognito window (logged out of Microsoft) before sending it out.
@@ -62,7 +62,7 @@ placeholder at any time.
 
 ## Deploy it
 
-Same account as `moc-brand-site` and `moc-email-signature` — GitHub login,
+Same account as `moc-brand-site` and `moc-email-signature`: GitHub login,
 same Vercel team.
 
 ```bash
@@ -78,7 +78,7 @@ settings:
 - **Link to existing project?** No
 - **Project name?** `moc-partner-program` (or whatever you want the URL to be)
 - **Directory?** `./`
-- This is a plain static site now — no `api/` folder, no build step, no
+- This is a plain static site now, with no `api/` folder, no build step, no
   storage to connect. The logo field just takes an image URL (the prospect's
   own hosted logo, or one you upload anywhere and link to).
 
@@ -90,7 +90,7 @@ Whenever Creative finalizes a new version of the deck:
    built (or ask Claude to redo that conversion from a new file).
 2. Replace the files in `slides/`, update `slides-data.js` if the slide count
    or order changed, commit, and `git push` (or `vercel --prod` again directly).
-3. Sales managers' existing links keep working — slide numbers that still
+3. Sales managers' existing links keep working. Slide numbers that still
    exist keep showing; numbers that got removed just drop out quietly.
 
 ## Project structure
