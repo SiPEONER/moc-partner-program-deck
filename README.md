@@ -60,27 +60,19 @@ incognito window (logged out of Microsoft) before sending it out.
 There's a "Remove" link next to the field to go back to the blank
 placeholder at any time.
 
-## Deploy it
+## Deploy
 
-Same account as `moc-brand-site` and `moc-email-signature`: GitHub login,
-same Vercel team.
+One process for every MOC site: push to `main` on GitHub (`SiPEONER/moc-partner-program-deck`)
+and Vercel deploys it automatically to moc-partner-program-deck.vercel.app. No CLI or upload
+deploys. It's a plain static site: no build step, no `api/` folder, no storage.
 
 ```bash
-cd ~/moc-partner-program-deck   # wherever you saved this folder
-npx vercel --prod
+git add .
+git commit -m "Describe the change"
+git push origin main
 ```
 
-First run asks you to log in (same method as before) and confirm project
-settings:
-
-- **Set up and deploy?** Yes
-- **Which scope?** your account/team
-- **Link to existing project?** No
-- **Project name?** `moc-partner-program` (or whatever you want the URL to be)
-- **Directory?** `./`
-- This is a plain static site now, with no `api/` folder, no build step, no
-  storage to connect. The logo field just takes an image URL (the prospect's
-  own hosted logo, or one you upload anywhere and link to).
+Commit as `SiPEONER <SiPEONER@users.noreply.github.com>` so Vercel matches the author to the team.
 
 ### Future updates
 
@@ -89,7 +81,7 @@ Whenever Creative finalizes a new version of the deck:
 1. Export the updated `.pptx` to slide images the same way this version was
    built (or ask Claude to redo that conversion from a new file).
 2. Replace the files in `slides/`, update `slides-data.js` if the slide count
-   or order changed, commit, and `git push` (or `vercel --prod` again directly).
+   or order changed, commit, and push to `main`.
 3. Sales managers' existing links keep working. Slide numbers that still
    exist keep showing; numbers that got removed just drop out quietly.
 
