@@ -161,7 +161,7 @@
     slideEls[activeId].classList.add("is-active");
 
     document.getElementById("counter").textContent =
-      (currentIndex + 1) + " / " + visible.length;
+      String(currentIndex + 1).padStart(2, "0") + " / " + String(visible.length).padStart(2, "0");
     document.getElementById("progress").style.width =
       ((currentIndex + 1) / visible.length) * 100 + "%";
 
@@ -245,8 +245,8 @@
   // ---------- Slide checklist ----------
   const slideList = document.getElementById("slideList");
 
-  const REORDER_UP_SVG = '<svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  const REORDER_DOWN_SVG = '<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const REORDER_UP_SVG = '<svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/></svg>';
+  const REORDER_DOWN_SVG = '<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/></svg>';
 
   function buildSlideList() {
     slideList.innerHTML = "";
