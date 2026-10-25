@@ -1,6 +1,7 @@
 # MOC Partner Program: live deck
 
-A shareable, web version of `moc-global-pitchdeck-v3a.pptx`. Every slide after
+A shareable, web version of `moc-global-pitchdeck-v3a.pptx` (since 2026-10-24, the brand-fixed copy
+`moc-global-pitchdeck-v3a (brand fixes 2026-10-24).pptx` in Andy's Claude outputs folder). Every slide after
 the cover is rendered straight from your finished PowerPoint design. Nothing
 was redesigned. The cover is the one live piece: a real HTML layout (not an
 image) so the partner logo slot actually works.
